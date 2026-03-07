@@ -1,0 +1,76 @@
+.page {
+  min-height: 60vh;
+}
+
+.container {
+  width: min(var(--container), calc(100% - (var(--gutter) * 2)));
+  margin-inline: auto;
+}
+
+.section {
+  padding: var(--section-y) 0;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-2);
+  box-shadow: 0 14px 40px rgba(18, 36, 53, 0.06);
+}
+
+.grid {
+  display: grid;
+  gap: var(--s-6);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  height: 48px;
+  padding: 0 20px;
+  border-radius: var(--r-1);
+
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-weight: 600;
+
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.btn:hover {
+  background: rgba(18, 36, 53, 0.04);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  border-color: var(--accent-2);
+  background: var(--accent-2);
+}

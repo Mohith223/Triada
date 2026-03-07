@@ -1,0 +1,185 @@
+<!-- ======================================================
+  Industries (Bento Control-Panel Grid)
+  Board: 12x6
+  Sizes: E=6x4, M=4x2, S=2x2
+  Count: 1E + 5M + 2S (no gaps)
+  Behavior:
+    - Auto loop rotates the active industry
+    - Click any tile to make it Elaborative (E)
+    - Grid reflows in 4 expansion zones (A/B/C/D) like iOS Control Center
+====================================================== -->
+
+<section id="industries" class="ind">
+  <div class="ind-inner">
+    <header class="ind-head">
+      <h2 class="ind-title">Industries</h2>
+      <p class="ind-sub">
+        Click any industry to expand — the grid reshuffles like a control panel while keeping a clean, gap-free layout.
+      </p>
+    </header>
+
+    <div class="ind-grid zone-a" data-ind-grid="true" aria-label="Industries bento grid">
+      <!-- NOTE: JS assigns data-slot="E|M1..M5|S1..S2" and toggles the active industry. -->
+
+      <article class="ind-tile" data-industry="1" data-slot="E">
+        <button class="ind-card" type="button" data-ind-action="expand" aria-expanded="true">
+          <span class="ind-chip">Industry 01</span>
+          <div class="ind-compact" aria-hidden="true">
+            <h3 class="ind-name">Healthcare</h3>
+            <p class="ind-line">Credentialing, workflows, and secure data handling.</p>
+          </div>
+          <div class="ind-elab" aria-hidden="false">
+            <h3 class="ind-name">Healthcare</h3>
+            <p class="ind-lead">Secure platforms for verification, scheduling, and patient-facing operations.</p>
+            <ul class="ind-bullets">
+              <li>Role-based dashboards, audit trails, and PHI-safe flows</li>
+              <li>Credentialing + verification workflows that reduce manual work</li>
+              <li>Scalable APIs, data pipelines, and observability baked in</li>
+            </ul>
+            <div class="ind-cta"><span>Explore workflows</span><span aria-hidden="true">→</span></div>
+          </div>
+        </button>
+      </article>
+
+      <article class="ind-tile" data-industry="2" data-slot="M1">
+        <button class="ind-card" type="button" data-ind-action="expand" aria-expanded="false">
+          <span class="ind-chip">Industry 02</span>
+          <div class="ind-compact" aria-hidden="false">
+            <h3 class="ind-name">FinTech</h3>
+            <p class="ind-line">Integrity-first systems and audit-ready data.</p>
+          </div>
+          <div class="ind-elab" aria-hidden="true">
+            <h3 class="ind-name">FinTech</h3>
+            <p class="ind-lead">Reconciliation, analytics, compliance reporting, and risk signals.</p>
+            <ul class="ind-bullets">
+              <li>Reliable ingestion + validation pipelines</li>
+              <li>SOX/GAAP-friendly reporting workflows</li>
+              <li>Incident-ready operations + observability</li>
+            </ul>
+            <div class="ind-cta"><span>Explore workflows</span><span aria-hidden="true">→</span></div>
+          </div>
+        </button>
+      </article>
+
+      <article class="ind-tile" data-industry="3" data-slot="M2">
+        <button class="ind-card" type="button" data-ind-action="expand" aria-expanded="false">
+          <span class="ind-chip">Industry 03</span>
+          <div class="ind-compact" aria-hidden="false">
+            <h3 class="ind-name">Logistics</h3>
+            <p class="ind-line">Tracking, proof, and dispute defense workflows.</p>
+          </div>
+          <div class="ind-elab" aria-hidden="true">
+            <h3 class="ind-name">Logistics</h3>
+            <p class="ind-lead">Operational platforms for shipments, accountability, and claims prevention.</p>
+            <ul class="ind-bullets">
+              <li>Media capture + evidence trails</li>
+              <li>Workflow automation + notifications</li>
+              <li>Secure storage, retention, and access controls</li>
+            </ul>
+            <div class="ind-cta"><span>Explore workflows</span><span aria-hidden="true">→</span></div>
+          </div>
+        </button>
+      </article>
+
+      <article class="ind-tile" data-industry="4" data-slot="M3">
+        <button class="ind-card" type="button" data-ind-action="expand" aria-expanded="false">
+          <span class="ind-chip">Industry 04</span>
+          <div class="ind-compact" aria-hidden="false">
+            <h3 class="ind-name">Marketplaces</h3>
+            <p class="ind-line">Profiles, ratings, matching, and payments.</p>
+          </div>
+          <div class="ind-elab" aria-hidden="true">
+            <h3 class="ind-name">Marketplaces</h3>
+            <p class="ind-lead">Two-sided platforms with trust, realtime workflows, and scale.</p>
+            <ul class="ind-bullets">
+              <li>Onboarding, verification, and reputation systems</li>
+              <li>Booking, chat, scheduling, and notifications</li>
+              <li>Fraud controls, moderation, and observability</li>
+            </ul>
+            <div class="ind-cta"><span>Explore workflows</span><span aria-hidden="true">→</span></div>
+          </div>
+        </button>
+      </article>
+
+      <article class="ind-tile" data-industry="5" data-slot="M4">
+        <button class="ind-card" type="button" data-ind-action="expand" aria-expanded="false">
+          <span class="ind-chip">Industry 05</span>
+          <div class="ind-compact" aria-hidden="false">
+            <h3 class="ind-name">SaaS</h3>
+            <p class="ind-line">Dashboards, roles, billing, and scale.</p>
+          </div>
+          <div class="ind-elab" aria-hidden="true">
+            <h3 class="ind-name">SaaS</h3>
+            <p class="ind-lead">MVP to production-grade SaaS with strong foundations.</p>
+            <ul class="ind-bullets">
+              <li>RBAC, multi-tenant patterns, and feature flags</li>
+              <li>Billing, usage metering, and lifecycle automation</li>
+              <li>Performance, security, and deployment pipelines</li>
+            </ul>
+            <div class="ind-cta"><span>Explore workflows</span><span aria-hidden="true">→</span></div>
+          </div>
+        </button>
+      </article>
+
+      <article class="ind-tile" data-industry="6" data-slot="M5">
+        <button class="ind-card" type="button" data-ind-action="expand" aria-expanded="false">
+          <span class="ind-chip">Industry 06</span>
+          <div class="ind-compact" aria-hidden="false">
+            <h3 class="ind-name">Enterprise IT</h3>
+            <p class="ind-line">Cloud, identity, governance, and upgrades.</p>
+          </div>
+          <div class="ind-elab" aria-hidden="true">
+            <h3 class="ind-name">Enterprise IT</h3>
+            <p class="ind-lead">Reliability-focused infrastructure with security and guardrails.</p>
+            <ul class="ind-bullets">
+              <li>IaC (Terraform), CI/CD, GitOps, and drift control</li>
+              <li>Kubernetes upgrades, incident response, observability</li>
+              <li>Security posture, patching workflows, compliance</li>
+            </ul>
+            <div class="ind-cta"><span>Explore workflows</span><span aria-hidden="true">→</span></div>
+          </div>
+        </button>
+      </article>
+
+      <article class="ind-tile" data-industry="7" data-slot="S1">
+        <button class="ind-card" type="button" data-ind-action="expand" aria-expanded="false">
+          <span class="ind-chip">Industry 07</span>
+          <div class="ind-compact" aria-hidden="false">
+            <h3 class="ind-name">AI Systems</h3>
+            <p class="ind-line">Applied automation and intelligence.</p>
+          </div>
+          <div class="ind-elab" aria-hidden="true">
+            <h3 class="ind-name">AI Systems</h3>
+            <p class="ind-lead">RAG, automation, and decision support built into workflows.</p>
+            <ul class="ind-bullets">
+              <li>Data prep + evaluation loops</li>
+              <li>Secure integrations and auditability</li>
+              <li>Production monitoring and reliability</li>
+            </ul>
+            <div class="ind-cta"><span>Explore workflows</span><span aria-hidden="true">→</span></div>
+          </div>
+        </button>
+      </article>
+
+      <article class="ind-tile" data-industry="8" data-slot="S2">
+        <button class="ind-card" type="button" data-ind-action="expand" aria-expanded="false">
+          <span class="ind-chip">Industry 08</span>
+          <div class="ind-compact" aria-hidden="false">
+            <h3 class="ind-name">Data &amp; Analytics</h3>
+            <p class="ind-line">Pipelines, insights, and reporting.</p>
+          </div>
+          <div class="ind-elab" aria-hidden="true">
+            <h3 class="ind-name">Data &amp; Analytics</h3>
+            <p class="ind-lead">Reliable ingestion, modeling, and actionable dashboards.</p>
+            <ul class="ind-bullets">
+              <li>Warehouse-first analytics patterns</li>
+              <li>Quality gates and anomaly detection</li>
+              <li>Business-facing dashboards and alerts</li>
+            </ul>
+            <div class="ind-cta"><span>Explore workflows</span><span aria-hidden="true">→</span></div>
+          </div>
+        </button>
+      </article>
+    </div>
+  </div>
+</section>

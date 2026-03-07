@@ -1,0 +1,176 @@
+.section-proof .section-head {
+  display: grid;
+  gap: var(--s-3);
+  max-width: 78ch;
+}
+
+.section-proof .section-title {
+  font-size: clamp(1.6rem, 1.1vw + 1.2rem, 2.1rem);
+  line-height: 1.15;
+}
+
+.proof-grid {
+  margin-top: var(--s-7);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-5);
+}
+
+.proof-card {
+  padding: var(--s-6);
+  display: grid;
+  gap: var(--s-3);
+}
+
+.proof-tag {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.proof-title {
+  font-size: 1.08rem;
+  font-weight: 750;
+}
+
+.proof-desc {
+  color: var(--muted);
+}
+
+.proof-points {
+  margin-top: var(--s-2);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--border);
+  display: grid;
+  gap: 10px;
+}
+
+.proof-points li {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 10px;
+  color: var(--muted);
+  align-items: start;
+}
+
+.proof-points li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: 999px;
+  background: rgba(79, 124, 255, 0.9);
+  box-shadow: 0 0 0 4px rgba(79, 124, 255, 0.1);
+}
+
+.proof-lower {
+  margin-top: var(--s-7);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--s-5);
+  align-items: start;
+}
+
+.principles {
+  padding: var(--s-6);
+}
+
+.principles-head {
+  display: grid;
+  gap: 6px;
+  padding-bottom: var(--s-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.principles-title {
+  font-weight: 750;
+  font-size: 1.05rem;
+}
+
+.principles-meta {
+  font-family: var(--mono);
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.principles-grid {
+  padding-top: var(--s-5);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-4);
+}
+
+.principle {
+  border: 1px solid var(--border);
+  border-radius: var(--r-1);
+  padding: var(--s-4);
+  background: rgba(233, 238, 252, 0.03);
+}
+
+.principle-k {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.principle-v {
+  margin-top: 8px;
+  font-weight: 750;
+  color: var(--text);
+}
+
+.principle-s {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.roles {
+  padding: var(--s-6);
+}
+
+.roles-title {
+  font-weight: 750;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.roles-text {
+  margin-bottom: var(--s-4);
+}
+
+.roles-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(233, 238, 252, 0.04);
+  color: var(--text);
+  font-weight: 650;
+  font-size: 0.92rem;
+}
+
+.roles-note {
+  margin-top: var(--s-5);
+}
+
+@media (max-width: 1020px) {
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-lower {
+    grid-template-columns: 1fr;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+}

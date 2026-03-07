@@ -1,0 +1,251 @@
+:root {
+  /* The 60/30/10 Color Palette */
+  --faq-60-prussian: #122435;
+  --faq-30-anti: #EFEFEF;
+  --faq-10-sinopia: #CC361E;
+  
+  /* Utility text color */
+  --faq-text-dark: #0f172a;
+}
+
+/* Ensure padding doesn't affect widths globally in this section */
+.faq-section * {
+  box-sizing: border-box;
+}
+
+.faq-section {
+  background-color: var(--faq-60-prussian);
+  padding: 100px 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--faq-30-anti);
+  width: 100%;
+  overflow: hidden; 
+}
+
+.faq-container {
+  max-width: 1200px;
+  min-height: 620px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* --- Left Column: Info & CTA --- */
+.faq-info-column {
+  position: sticky;
+  top: 40px; 
+}
+
+.faq-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(239, 239, 239, 0.1);
+  color: var(--faq-30-anti);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  border: 1px solid rgba(239, 239, 239, 0.2);
+}
+
+.faq-tag-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--faq-10-sinopia);
+  border-radius: 50%;
+}
+
+.faq-title {
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 40px 0;
+}
+
+/* CTA Card */
+.faq-cta-card {
+  background-color: var(--faq-30-anti);
+  color: var(--faq-text-dark);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.faq-cta-title {
+  font-size: 24px;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.faq-cta-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin: 0 0 24px 0;
+}
+
+.faq-cta-btn {
+  display: inline-block;
+  background-color: var(--faq-10-sinopia);
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.faq-cta-btn:hover {
+  background-color: #b32e18; 
+  transform: translateY(-2px);
+}
+
+/* --- Right Column: Accordion --- */
+.faq-accordion-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.faq-item {
+  background-color: var(--faq-30-anti);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 24px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--faq-text-dark);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; 
+  font-family: inherit;
+  line-height: 1.4;
+  white-space: normal !important; /* Force text wrapping */
+}
+
+.faq-icon {
+  color: var(--faq-10-sinopia);
+  background-color: rgba(204, 54, 30, 0.1); 
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.3, 1), background-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0; /* Prevents icon squishing */
+}
+
+/* === THE BULLETPROOF MAX-HEIGHT FIX === */
+.faq-answer {
+  display: block; 
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  background-color: var(--faq-30-anti);
+}
+
+/* Move padding here to prevent margin-collapse and swallowing bugs */
+.faq-answer-inner {
+  padding: 0 30px 24px 30px; 
+}
+
+.faq-answer p {
+  margin: 0;
+  padding: 0; 
+  color: var(--faq-text-dark);
+  opacity: 0.8;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Expand to a large enough pixel value to fit any text when active OR hovered */
+.faq-item.active .faq-answer,
+.faq-item:hover .faq-answer {
+  max-height: 800px; 
+}
+
+/* Rotate the arrow and change color when active OR hovered */
+.faq-item.active .faq-icon,
+.faq-item:hover .faq-icon {
+  transform: rotate(180deg);
+  background-color: var(--faq-10-sinopia);
+  color: white;
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================= */
+
+@media (max-width: 992px) {
+  .faq-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .faq-info-column {
+    position: static; 
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 80px 20px;
+  }
+  .faq-question {
+    font-size: 16px;
+    padding: 20px;
+    gap: 16px;
+  }
+  /* Updated to target inner wrapper */
+  .faq-answer-inner {
+    padding: 0 20px 20px 20px;
+  }
+  .faq-answer p {
+    font-size: 15px;
+  }
+  .faq-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 60px 15px;
+  }
+  .faq-cta-card {
+    padding: 24px;
+  }
+  .faq-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+  .faq-cta-btn {
+    width: 100%; 
+  }
+  .faq-question {
+    padding: 16px;
+  }
+  /* Updated to target inner wrapper */
+  .faq-answer-inner {
+    padding: 0 16px 16px 16px;
+  }
+}

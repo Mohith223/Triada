@@ -1,0 +1,226 @@
+/* --- Global Page Setup --- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Prevents sticky nav from covering section titles */
+}
+
+/* Ensure these match your variables.css if not already imported */
+:root {
+  --prussian-blue: #003153;
+  --anti-flash: #F2F3F4;
+  --sinopia: #CB4154;
+  --sinopia-dark: #b03848;
+  --text-dark: #0f172a; 
+  --text-muted: #475569;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bg-alt {
+  background-color: #ffffff; /* Gives slight contrast against Anti-flash */
+}
+
+/* --- Hero Section --- */
+.services-hero {
+  background-color: var(--prussian-blue);
+  color: var(--anti-flash);
+  padding: 120px 20px 80px 20px;
+  text-align: center;
+}
+
+.services-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.services-hero p {
+  font-size: 1.25rem;
+  color: rgba(242, 243, 244, 0.85);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- Sticky Sub-Navigation --- */
+.services-subnav {
+  background-color: var(--anti-flash);
+  border-bottom: 1px solid rgba(0, 49, 83, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.services-subnav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.services-subnav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition-smooth);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.services-subnav a:hover,
+.services-subnav a.active {
+  color: var(--sinopia);
+  border-color: var(--sinopia);
+}
+
+/* --- Service Detail Blocks --- */
+.service-detail-block {
+  padding: 100px 0;
+  background-color: var(--anti-flash);
+}
+
+.split-layout {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.split-layout.reversed {
+  flex-direction: row-reverse;
+}
+
+.service-content {
+  flex: 1;
+}
+
+.accent-line {
+  width: 60px;
+  height: 4px;
+  background-color: var(--sinopia);
+  margin-bottom: 24px;
+  border-radius: 2px;
+}
+
+.service-content h2 {
+  font-size: 2.5rem;
+  color: var(--prussian-blue);
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+
+.service-content p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+.feature-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--sinopia);
+  font-weight: bold;
+}
+
+.secondary-btn {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--prussian-blue);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: var(--transition-smooth);
+}
+
+.secondary-btn:hover {
+  color: var(--sinopia);
+  border-color: var(--sinopia);
+}
+
+/* Visual Placeholders */
+.service-visual {
+  flex: 1;
+  height: 400px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--prussian-blue) 0%, #001f35 100%);
+  color: var(--anti-flash);
+  font-weight: bold;
+  box-shadow: 0 20px 40px rgba(0, 49, 83, 0.08);
+}
+
+/* --- Bottom CTA --- */
+.bottom-cta {
+  background-color: var(--prussian-blue);
+  color: var(--anti-flash);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.bottom-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.bottom-cta p {
+  font-size: 1.125rem;
+  color: rgba(242, 243, 244, 0.8);
+  margin-bottom: 40px;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: var(--sinopia);
+  color: #ffffff;
+  padding: 16px 40px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 14px rgba(203, 65, 84, 0.3);
+}
+
+.primary-btn:hover {
+  background: var(--sinopia-dark);
+  transform: translateY(-2px);
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 992px) {
+  .split-layout, .split-layout.reversed {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .service-visual {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-hero h1 { font-size: 2.5rem; }
+  .service-content h2 { font-size: 2rem; }
+}

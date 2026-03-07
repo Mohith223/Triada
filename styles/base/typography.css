@@ -1,0 +1,51 @@
+html {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+}
+
+body {
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.small {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.kicker {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+a.link {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+a.link:hover {
+  border-bottom-color: rgba(18, 36, 53, 0.35);
+}
+
+/* Better default focus (keyboard users) */
+:where(a, button, input, textarea, select):focus-visible {
+  outline: 3px solid rgba(204, 54, 30, 0.28);
+  outline-offset: 2px;
+}

@@ -1,0 +1,253 @@
+/* --- Color Palette Variables --- */
+:root {
+  --prussian-blue: #003153;
+  --anti-flash: #F2F3F4;
+  --sinopia: #CB4154;
+  --sinopia-dark: #b03848;
+  --text-dark: #0f172a; 
+  --text-muted: #475569;
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Section (60% Dominant) --- */
+.services-section {
+  background-color: var(--prussian-blue);
+  padding: 100px 20px;
+  color: var(--anti-flash);
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Typography --- */
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px auto;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: rgba(242, 243, 244, 0.85);
+  line-height: 1.6;
+}
+
+/* --- The Premium Toggle UI (Symmetry Fix) --- */
+.toggle-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Forces two exactly equal halves */
+  background: rgba(255, 255, 255, 0.08); 
+  border-radius: 999px;
+  padding: 6px;
+  width: 380px; /* Fixed width prevents word-length distortion */
+  max-width: 100%; /* Keeps it responsive on small mobile screens */
+  margin: 0 auto 56px auto;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); 
+  backdrop-filter: blur(8px);
+}
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 12px 0; /* Removed side padding, letting the grid handle width */
+  text-align: center; /* Ensure text stays perfectly centered in its half */
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6); 
+  cursor: pointer;
+  border-radius: 999px;
+  position: relative;
+  z-index: 2;
+  transition: var(--transition-smooth);
+}
+
+.toggle-btn:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.toggle-btn.active {
+  color: #ffffff;
+}
+
+/* The sliding Sinopia pill */
+.toggle-bg {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  /* Pill takes up exactly half the container, minus the padding */
+  height: calc(100% - 12px);
+  width: calc(50% - 6px); 
+  background: var(--sinopia); 
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(203, 65, 84, 0.4); 
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); 
+  z-index: 1;
+}
+
+.toggle-container.talent-active .toggle-bg {
+  transform: translateX(100%);
+}
+
+/* --- Grid Fade Transitions --- */
+.service-grid {
+  display: none; /* Hides grids by default */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.service-grid.active-grid {
+  display: grid; /* Only the active grid is visible */
+  animation: slideFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Level 5 Cards (30% Secondary) --- */
+.service-card {
+  background: var(--anti-flash);
+  border-radius: 16px;
+  padding: 40px 24px 32px 24px;
+  text-decoration: none;
+  color: var(--text-dark);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Accent line at the top of the card */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--sinopia);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2), 0 10px 10px -5px rgba(0,0,0,0.1);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* 10% Accent Icons */
+.icon-wrapper {
+  width: 56px;
+  height: 56px;
+  background: rgba(203, 65, 84, 0.1);
+  color: var(--sinopia);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: var(--transition-smooth);
+}
+
+.service-card:hover .icon-wrapper {
+  background: var(--sinopia);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.icon-wrapper svg {
+  width: 28px;
+  height: 28px;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--prussian-blue);
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.card-arrow {
+  margin-top: auto;
+  color: var(--sinopia);
+  font-weight: bold;
+  font-size: 1.25rem;
+  opacity: 0;
+  transform: translateX(-15px);
+  transition: var(--transition-smooth);
+}
+
+.service-card:hover .card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- Call To Action --- */
+.services-cta {
+  text-align: center;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: var(--sinopia);
+  color: #ffffff;
+  padding: 16px 40px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(203, 65, 84, 0.3);
+}
+
+.primary-btn:hover {
+  background: var(--sinopia-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(203, 65, 84, 0.4);
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 1024px) {
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .service-grid { grid-template-columns: 1fr; }
+  .toggle-container { transform: scale(0.9); }
+}
