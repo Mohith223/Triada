@@ -1,127 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services | Triada</title>
-  
-  <link rel="stylesheet" href="../../styles/base/reset.css">
-  <link rel="stylesheet" href="../../styles/base/variables.css">
-  <link rel="stylesheet" href="../../styles/base/typography.css">
-  <link rel="stylesheet" href="../../styles/base/layout.css">
-  
-  <link rel="stylesheet" href="../../styles/pages/services.css">
-</head>
-<body>
+  <head>
+    <base href="../../" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f4ed" />
+    <meta name="description" content="Explore Triada Technologies staffing solutions, industry coverage, and workforce support." />
+    <title>Staffing Solutions | Triada Technologies</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="stylesheet" href="styles/base/fonts.css" />
+    <link rel="stylesheet" href="styles/base/reset.css" />
+    <link rel="stylesheet" href="styles/base/variables.css" />
+    <link rel="stylesheet" href="styles/base/typography.css" />
+    <link rel="stylesheet" href="styles/base/layout.css" />
+    <link rel="stylesheet" href="styles/partials/header.css" />
+    <link rel="stylesheet" href="styles/partials/footer.css" />
+    <link rel="stylesheet" href="styles/sections/how-we-work.css" />
+    <link rel="stylesheet" href="styles/sections/contact.css" />
+    <link rel="stylesheet" href="styles/pages/site-pages.css" />
+  </head>
+  <body class="inner-page services-page">
+    <a class="skip-link" href="html/pages/services.html#main-content">Skip to content</a>
+    <div data-include="html/partials/header.html"></div>
+    <main class="page-shell" id="main-content">
+      <section class="page-hero page-hero--services">
+        <div class="container page-hero__grid">
+          <div>
+            <p class="eyebrow">Staffing solutions</p>
+            <h1>The right people.<br /><em>For what’s next.</em></h1>
+          </div>
+          <p class="page-hero__lead">Recruitment shaped around your business goals, workforce needs, and project timelines.</p>
+        </div>
+      </section>
 
-  <div id="header-placeholder"></div>
+      <section class="service-detail section">
+        <div class="container">
+          <div class="service-detail__intro">
+            <h2>From the first search<br /><em>to what follows.</em></h2>
+            <p>Triada works across sourcing, screening, onboarding, and workforce management, bringing clients, vendors, and candidates into the same conversation.</p>
+          </div>
+          <div class="service-detail__rows">
+            <article class="service-detail__row" id="sourcing">
+              <span class="service-detail__label"><span aria-hidden="true">01</span> Recruitment</span>
+              <div><h3>Sourcing and screening</h3><p>Find and assess candidates with each role’s context and requirements in view.</p></div>
+            </article>
+            <article class="service-detail__row" id="onboarding">
+              <span class="service-detail__label"><span aria-hidden="true">02</span> Workforce</span>
+              <div><h3>Onboarding and ongoing support</h3><p>Support the stages that follow a successful match, including onboarding and workforce management.</p></div>
+            </article>
+            <article class="service-detail__row" id="partnership">
+              <span class="service-detail__label"><span aria-hidden="true">03</span> Partnership</span>
+              <div><h3>Vendor collaboration</h3><p>Build strong vendor relationships that help create efficient, scalable staffing solutions.</p></div>
+            </article>
+            <article class="service-detail__row" id="insights">
+              <span class="service-detail__label"><span aria-hidden="true">04</span> Insight</span>
+              <div><h3>Market and talent intelligence</h3><p>Use market intelligence, salary benchmarking, and talent insights to support business expansion.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <section class="services-hero">
-    <div class="container">
-      <h1>Engineering Solutions Built for Scale</h1>
-      <p>From filling critical skill gaps to deploying autonomous product squads, Triada provides the technical firepower required to accelerate your roadmap.</p>
-    </div>
-  </section>
+      <section class="service-sectors section section--compact" id="service-sectors" aria-labelledby="service-sectors-title">
+        <div class="container service-sectors__grid">
+          <div class="section-heading">
+            <p class="eyebrow">Industry coverage</p>
+            <h2 id="service-sectors-title">Expertise across<br /><em>the working world.</em></h2>
+          </div>
+          <ul class="service-sector-list">
+            <li>IT &amp; technology</li><li>Healthcare &amp; life sciences</li><li>Finance &amp; accounting</li>
+            <li>Engineering &amp; construction</li><li>Administrative &amp; clerical</li><li>Manufacturing &amp; industrial</li>
+            <li>Logistics &amp; supply chain</li><li>Telecommunications</li><li>Retail &amp; customer support</li>
+          </ul>
+        </div>
+      </section>
 
-  <nav class="services-subnav" id="subnav">
-    <div class="container">
-      <ul>
-        <li><a href="#dedicated-teams" class="active">Dedicated Teams</a></li>
-        <li><a href="#staff-augmentation">Staff Augmentation</a></li>
-        <li><a href="#project-rescue">Project Rescue</a></li>
-        <li><a href="#managed-services">Managed Services</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <section class="service-detail-block" id="dedicated-teams">
-    <div class="container split-layout">
-      <div class="service-content">
-        <div class="accent-line"></div>
-        <h2>Dedicated Development Teams</h2>
-        <p>Deploy a fully autonomous, cross-functional engineering pod that integrates directly with your business goals. We provide product managers, senior developers, and QA engineers who take complete ownership of the software development lifecycle.</p>
-        <ul class="feature-list">
-          <li><strong>End-to-End Delivery:</strong> From architecture design to production deployment.</li>
-          <li><strong>Agile Integration:</strong> Seamlessly mapping to your existing sprint schedules and ceremonies.</li>
-          <li><strong>Domain Expertise:</strong> Teams curated specifically for your industry vertical and tech stack.</li>
-        </ul>
-        <a href="contact.html" class="secondary-btn">Build Your Team →</a>
-      </div>
-      <div class="service-visual">
-        <div class="visual-placeholder">Team Collaboration Graphic</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="service-detail-block bg-alt" id="staff-augmentation">
-    <div class="container split-layout reversed">
-      <div class="service-content">
-        <div class="accent-line"></div>
-        <h2>Targeted Staff Augmentation</h2>
-        <p>Bypass the grueling hiring cycle. Instantly inject pre-vetted, senior-level technical talent into your existing workflows to bridge critical skill gaps and hit aggressive delivery deadlines.</p>
-        <ul class="feature-list">
-          <li><strong>Rapid Onboarding:</strong> Engineers who commit code in days, not weeks.</li>
-          <li><strong>Top 1% Talent:</strong> Rigorously tested for system design, clean code, and communication.</li>
-          <li><strong>Ultimate Flexibility:</strong> Scale your augmented resources up or down based on project demands.</li>
-        </ul>
-        <a href="contact.html" class="secondary-btn">Find Specialized Talent →</a>
-      </div>
-      <div class="service-visual">
-        <div class="visual-placeholder">Skill Gap Graphic</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="service-detail-block" id="project-rescue">
-    <div class="container split-layout">
-      <div class="service-content">
-        <div class="accent-line"></div>
-        <h2>Project Rescue & Audits</h2>
-        <p>Technical debt, architectural bottlenecks, and stalled development can paralyze a product. We bring in specialized technical leadership to audit your codebase, untangle dependencies, and get your project back on track.</p>
-        <ul class="feature-list">
-          <li><strong>Comprehensive Code Audits:</strong> Identifying security vulnerabilities and performance bottlenecks.</li>
-          <li><strong>Architecture Refactoring:</strong> Modernizing monolithic legacy systems to scalable microservices.</li>
-          <li><strong>Process Optimization:</strong> Implementing robust CI/CD pipelines and automated testing.</li>
-        </ul>
-        <a href="contact.html" class="secondary-btn">Request a Code Audit →</a>
-      </div>
-      <div class="service-visual">
-        <div class="visual-placeholder">Code Audit Graphic</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="service-detail-block bg-alt" id="managed-services">
-    <div class="container split-layout reversed">
-      <div class="service-content">
-        <div class="accent-line"></div>
-        <h2>Managed IT Services</h2>
-        <p>Ensure your digital infrastructure remains secure, highly available, and cost-optimized. Our proactive managed services let your internal team focus on innovation rather than putting out operational fires.</p>
-        <ul class="feature-list">
-          <li><strong>24/7 Monitoring:</strong> Proactive anomaly detection and incident response.</li>
-          <li><strong>Cloud FinOps:</strong> Continuous optimization of AWS/Azure infrastructure to reduce spend.</li>
-          <li><strong>Security & Compliance:</strong> Regular patch management and vulnerability scanning.</li>
-        </ul>
-        <a href="contact.html" class="secondary-btn">Secure Your Infrastructure →</a>
-      </div>
-      <div class="service-visual">
-        <div class="visual-placeholder">Cloud Server Graphic</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="bottom-cta">
-    <div class="container">
-      <h2>Ready to upgrade your engineering capabilities?</h2>
-      <p>Let's discuss your technical challenges and map out a tailored engagement model.</p>
-      <a href="contact.html" class="primary-btn">Schedule a Consultation</a>
-    </div>
-  </section>
-
-  <div id="footer-placeholder"></div>
-
-  <script src="../../js/includes.js"></script>
-  <script src="../../js/pages/services.js"></script>
-  <script src="../../js/main.js"></script>
-</body>
+      <div data-include="html/sections/how-we-work.html"></div>
+      <div data-include="html/sections/contact.html"></div>
+    </main>
+    <div data-include="html/partials/footer.html"></div>
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>

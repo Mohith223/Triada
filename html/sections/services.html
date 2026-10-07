@@ -1,102 +1,18 @@
-<section class="services-section" id="services" aria-labelledby="services-heading">
+﻿<section class="service-overview section" id="services" aria-labelledby="services-title">
   <div class="container">
-    
-    <div class="section-header">
-      <h2 id="services-heading">Scale Your Engineering Power</h2>
-      <p>Seamlessly integrate top-tier tech talent into your existing workflows, or join Walrus IT to build high-impact software.</p>
+    <div class="section-kicker"><p class="eyebrow">Our expertise</p><span class="section-number">02 / MORE THAN A MATCH</span></div>
+    <div class="service-overview__grid">
+      <div class="service-overview__intro" data-reveal>
+        <h2 id="services-title">The right support.<br>At <em>every step.</em></h2>
+        <p>Good staffing doesn’t end at an introduction. From the first conversation to the first day and beyond, we help make work work.</p>
+        <a class="button button--light" href="html/pages/services.html">Explore our expertise <span class="button__arrow" aria-hidden="true">&#8599;</span></a>
+        <div class="service-signature" aria-hidden="true"><svg viewBox="0 0 150 90"><path d="M10 70C35 70 30 15 52 15S65 75 87 75s30-60 53-60M10 48h130" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="52" cy="15" r="5" fill="currentColor"/><circle cx="87" cy="75" r="5" fill="currentColor"/></svg><span>Made for the way you work.</span></div>
+      </div>
+      <div class="service-overview__list" data-reveal>
+        <a class="service-overview__item" href="html/pages/services.html#sourcing"><span class="service-overview__number">01</span><div><h3>Discover the right talent.</h3><p>Thoughtful sourcing and screening that looks beyond a résumé to find a real fit.</p></div><span aria-hidden="true">&#8599;</span></a>
+        <a class="service-overview__item" href="html/pages/services.html#onboarding"><span class="service-overview__number">02</span><div><h3>Set people up to thrive.</h3><p>Onboarding and workforce support that helps people settle in and teams move forward.</p></div><span aria-hidden="true">&#8599;</span></a>
+        <a class="service-overview__item" href="html/pages/services.html#insights"><span class="service-overview__number">03</span><div><h3>Plan with perspective.</h3><p>Market intelligence, salary benchmarks, and talent insights for informed decisions.</p></div><span aria-hidden="true">&#8599;</span></a>
+      </div>
     </div>
-
-    <div class="toggle-container" role="tablist" aria-label="Service Audiences">
-      <div class="toggle-bg" aria-hidden="true"></div>
-      <button class="toggle-btn active" id="btn-companies" role="tab" aria-selected="true" aria-controls="grid-companies">
-        For Companies
-      </button>
-      <button class="toggle-btn" id="btn-talent" role="tab" aria-selected="false" aria-controls="grid-talent">
-        For Talent
-      </button>
-    </div>
-
-    <div class="service-grid active-grid" id="grid-companies" role="tabpanel" aria-labelledby="btn-companies">
-      
-      <a href="html/pages/services.html#dedicated-teams" class="service-card">
-        <div class="icon-wrapper">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-        </div>
-        <h3>Dedicated Teams</h3>
-        <p>Deploy fully autonomous, cross-functional engineering pods that take complete ownership of your development cycle.</p>
-        <div class="card-arrow" aria-hidden="true">→</div>
-      </a>
-
-      <a href="html/pages/services.html#staff-augmentation" class="service-card">
-        <div class="icon-wrapper">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-        </div>
-        <h3>Staff Augmentation</h3>
-        <p>Rapidly scale your internal capacity with pre-vetted senior developers, cloud architects, and QA specialists.</p>
-        <div class="card-arrow" aria-hidden="true">→</div>
-      </a>
-
-      <a href="html/pages/services.html#project-rescue" class="service-card">
-        <div class="icon-wrapper">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-        </div>
-        <h3>Project Rescue</h3>
-        <p>Inject specialized technical leadership to untangle complex codebases, fix architecture flaws, and accelerate delivery.</p>
-        <div class="card-arrow" aria-hidden="true">→</div>
-      </a>
-
-      <a href="html/pages/services.html#managed-services" class="service-card">
-        <div class="icon-wrapper">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-        </div>
-        <h3>Managed Services</h3>
-        <p>Ensure zero downtime with proactive infrastructure monitoring, cloud optimization, and continuous security maintenance.</p>
-        <div class="card-arrow" aria-hidden="true">→</div>
-      </a>
-    </div>
-
-    <div class="service-grid hidden-grid" id="grid-talent" role="tabpanel" aria-labelledby="btn-talent">
-      
-      <a href="html/pages/careers.html" class="service-card">
-        <div class="icon-wrapper">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-        </div>
-        <h3>High-Impact Projects</h3>
-        <p>Work on complex, cutting-edge tech stacks for ambitious companies, from scaling startups to enterprise leaders.</p>
-        <div class="card-arrow" aria-hidden="true">→</div>
-      </a>
-
-      <a href="html/pages/careers.html" class="service-card">
-        <div class="icon-wrapper">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-        </div>
-        <h3>Career Velocity</h3>
-        <p>Continuous upskilling, certification sponsorships, and a clear trajectory for moving into technical leadership.</p>
-        <div class="card-arrow" aria-hidden="true">→</div>
-      </a>
-
-      <a href="html/pages/careers.html" class="service-card">
-        <div class="icon-wrapper">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </div>
-        <h3>Flexible Engagement</h3>
-        <p>Choose the way you work best, whether that's fully remote, hybrid, contract-based, or permanent placement.</p>
-        <div class="card-arrow" aria-hidden="true">→</div>
-      </a>
-
-      <a href="html/pages/careers.html" class="service-card">
-        <div class="icon-wrapper">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
-        </div>
-        <h3>Elite Community</h3>
-        <p>Join a deeply technical culture. Share knowledge, get mentorship, and collaborate with top-tier engineering peers.</p>
-        <div class="card-arrow" aria-hidden="true">→</div>
-      </a>
-    </div>
-
-    <div class="services-cta">
-      <a href="html/pages/services.html" class="primary-btn" id="cta-btn">Explore All Services</a>
-    </div>
-
   </div>
 </section>

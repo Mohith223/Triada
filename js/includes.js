@@ -1,30 +1,21 @@
-/**
- * includes.js (ESM)
- * Loads HTML fragments into elements that have data-include="path".
- * Dispatches: "includes:loaded" when done.
- */
-
 export async function loadIncludes() {
-  const nodes = Array.from(document.querySelectorAll("[data-include]"));
+  const elements = [...document.querySelectorAll("[data-include]")];
 
-  await Promise.all(
-    nodes.map(async (el) => {
-      const path = el.getAttribute("data-include");
-      if (!path) return;
+  await Promise.all(elements.map(async (element) => {
+    const path = element.getAttribute("data-include");
+    if (!path) return;
 
-      try {
-        const res = await fetch(path, { cache: "no-cache" });
-        if (!res.ok) throw new Error(`Include failed: ${path} (${res.status})`);
-
-        const html = await res.text();
-        el.innerHTML = html;
-        el.removeAttribute("data-include");
-      } catch (err) {
-        console.error(err);
-        el.innerHTML = `<!-- include failed: ${path} -->`;
-      }
-    })
-  );
+    try {
+      const url = new URL(path, document.baseURI);
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`Include request returned ${response.status}`);
+      element.innerHTML = await response.text();
+      element.removeAttribute("data-include");
+    } catch (error) {
+      console.error(`Unable to load shared site fragment: ${path}`, error);
+      element.innerHTML = '<p class="include-error">Shared page content could not load. Run the site through a local web server and refresh.</p>';
+    }
+  }));
 
   document.dispatchEvent(new CustomEvent("includes:loaded"));
 }

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <base href="../../" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f4ed" />
+    <meta name="description" content="Tell Triada Technologies about your staffing needs and workforce goals." />
+    <title>Request Talent | Triada Technologies</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="stylesheet" href="styles/base/fonts.css" />
+    <link rel="stylesheet" href="styles/base/reset.css" />
+    <link rel="stylesheet" href="styles/base/variables.css" />
+    <link rel="stylesheet" href="styles/base/typography.css" />
+    <link rel="stylesheet" href="styles/base/layout.css" />
+    <link rel="stylesheet" href="styles/partials/header.css" />
+    <link rel="stylesheet" href="styles/partials/footer.css" />
+    <link rel="stylesheet" href="styles/pages/site-pages.css" />
+  </head>
+  <body class="inner-page form-page staffing-request-page">
+    <a class="skip-link" href="html/pages/staffing-request.html#main-content">Skip to content</a>
+    <div data-include="html/partials/header.html"></div>
+    <main class="page-shell" id="main-content">
+      <section class="page-hero page-hero--form">
+        <div class="container page-hero__grid">
+          <div><p class="eyebrow">For employers</p><h1>Let’s build<br /><em>your team.</em></h1></div>
+          <p class="page-hero__lead">Share a little about your team, the role, and your timeline. The more context you provide, the easier it is to understand the need.</p>
+        </div>
+      </section>
+
+      <section class="form-section section">
+        <div class="container form-layout">
+          <aside class="form-aside">
+            <h2>A good fit<br /><em>starts here.</em></h2>
+            <p>Triada’s recruitment approach is tailored to your business goals, workforce needs, and project timelines.</p>
+            <div class="form-contact-note"><span>Prefer email?</span><a href="mailto:hr@triadatechnologies.com">hr@triadatechnologies.com</a></div>
+          </aside>
+
+          <form class="site-form" data-demo-form>
+            <div class="form-grid">
+              <div class="form-field"><label for="staff-name">Your name <span aria-hidden="true">*</span></label><input id="staff-name" name="name" type="text" autocomplete="name" required /></div>
+              <div class="form-field"><label for="staff-email">Work email <span aria-hidden="true">*</span></label><input id="staff-email" name="email" type="email" autocomplete="email" spellcheck="false" required /></div>
+              <div class="form-field"><label for="staff-company">Company <span aria-hidden="true">*</span></label><input id="staff-company" name="company" type="text" autocomplete="organization" required /></div>
+              <div class="form-field"><label for="staff-role">Role or skill area <span aria-hidden="true">*</span></label><input id="staff-role" name="role" type="text" required /></div>
+              <div class="form-field"><label for="staff-count">Number of people</label><select id="staff-count" name="teamSize"><option value="">Select a range</option><option>1</option><option>2–5</option><option>6–10</option><option>11+</option><option>Not sure yet</option></select></div>
+              <div class="form-field"><label for="staff-timing">When do you need support?</label><select id="staff-timing" name="timing"><option value="">Select a timeframe</option><option>As soon as possible</option><option>Within a month</option><option>Within a quarter</option><option>Planning ahead</option></select></div>
+              <div class="form-field form-field--full"><label for="staff-message">What would you like Triada to know? <span aria-hidden="true">*</span></label><textarea id="staff-message" name="message" rows="5" required></textarea><span class="field-help">A few sentences about the role, team, or project is enough.</span></div>
+            </div>
+            <div class="form-submit-row"><button class="button button--primary" type="submit">Review request <span class="button__arrow" aria-hidden="true">↗</span></button><p>Fields marked <span aria-hidden="true">*</span> are required.</p></div>
+            <p class="form-status" data-form-status role="status" aria-live="polite" tabindex="-1" hidden></p>
+            <p class="form-disclaimer">This local preview does not send or store your information. See the <a href="html/pages/privacy.html">privacy notice</a>.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div data-include="html/partials/footer.html"></div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

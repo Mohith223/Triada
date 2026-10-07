@@ -1,111 +1,27 @@
-<section id="hero" class="hero">
-  <!-- Full background image -->
-  <!-- If this image is meaningful, keep it as <img> so you can use alt text -->
-  <img
-    class="hero-bg"
-    src="assets/images/hero-bg.jpg"
-    alt=""
-    aria-hidden="true"
-  />
-
-  <!-- Prussian blue overlay -->
-  <div class="hero-overlay" aria-hidden="true"></div>
-
-  <div class="hero-inner">
-    <!-- Right Foreground Visual placeholder (you will add later) -->
-    <div class="hero-visual" aria-hidden="true"></div>
-
-    <div class="hero-slides" data-hero-slides>
-      <!-- Slide 1 -->
-      <article class="hero-slide is-active is-animating" data-slide="1" aria-hidden="false">
-        <div class="hero-content">
-          <h1 class="hero-title hero-reveal" aria-label="Design, Prototype, Execute.">
-            <span class="hero-reveal-line" style="--d: 0ms;">
-              <span class="hero-reveal-inner">DESIGN,</span>
-            </span>
-
-            <span class="hero-reveal-line" style="--d: 140ms;">
-              <span class="hero-reveal-inner">PROTOTYPE,</span>
-            </span>
-
-            <span class="hero-reveal-line" style="--d: 280ms;">
-              <span class="hero-reveal-inner">EXECUTE.</span>
-            </span>
-          </h1>
-
-          <p class="hero-sub hero-sub-reveal" style="--d: 520ms;">
-            Bogus placeholder copy to test the per-line reveal animation.
-          </p>
-
-          <div class="hero-counter">
-            <span data-hero-current>01</span>
-            <span class="hero-line"></span>
-            <span data-hero-total>03</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Slide 2 -->
-      <article class="hero-slide" data-slide="2" aria-hidden="true">
-        <div class="hero-content">
-          <h1 class="hero-title hero-reveal" aria-label="Build fast, Integrate clean.">
-            <span class="hero-reveal-line" style="--d: 0ms;">
-              <span class="hero-reveal-inner">BUILD FAST,</span>
-            </span>
-
-            <span class="hero-reveal-line" style="--d: 140ms;">
-              <span class="hero-reveal-inner">INTEGRATE</span>
-            </span>
-
-            <span class="hero-reveal-line" style="--d: 280ms;">
-              <span class="hero-reveal-inner">CLEAN.</span>
-            </span>
-          </h1>
-
-          <p class="hero-sub hero-sub-reveal" style="--d: 520ms;">
-            Placeholder copy for second slide. Stagger proves it’s not one block.
-          </p>
-
-          <div class="hero-counter">
-            <span>02</span>
-            <span class="hero-line"></span>
-            <span>03</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Slide 3 -->
-      <article class="hero-slide" data-slide="3" aria-hidden="true">
-        <div class="hero-content">
-          <h1 class="hero-title hero-reveal" aria-label="Scale with confidence.">
-            <span class="hero-reveal-line" style="--d: 0ms;">
-              <span class="hero-reveal-inner">SCALE WITH</span>
-            </span>
-
-            <span class="hero-reveal-line" style="--d: 140ms;">
-              <span class="hero-reveal-inner">CONFIDENCE.</span>
-            </span>
-
-            <span class="hero-reveal-line" style="--d: 280ms;">
-              <span class="hero-reveal-inner">NO CHAOS.</span>
-            </span>
-          </h1>
-
-          <p class="hero-sub hero-sub-reveal" style="--d: 520ms;">
-            Placeholder copy for third slide to validate repeatable reveal.
-          </p>
-
-          <div class="hero-counter">
-            <span>03</span>
-            <span class="hero-line"></span>
-            <span>03</span>
-          </div>
-        </div>
-      </article>
+﻿<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="container hero-layout">
+    <div class="hero-copy">
+      <p class="eyebrow">Good people. Meaningful connections.</p>
+      <h1 id="hero-title">Great people.<br><em>Greater<br> possibilities.</em></h1>
+      <p class="hero-intro">A team that takes you further. A career that feels right. We bring the right people together.</p>
+      <div class="hero-actions">
+        <a class="button button--primary" href="html/pages/staffing-request.html">Find your people <span class="button__arrow" aria-hidden="true">&#8599;</span></a>
+        <a class="button button--dark" href="html/pages/jobs.html">Find your next role <span class="button__arrow" aria-hidden="true">&#8599;</span></a>
+      </div>
+      <div class="hero-footnote"><span class="hero-footnote__line" aria-hidden="true"></span><span>People-first staffing. Nationwide reach.</span></div>
     </div>
-
-    <!-- Click zones -->
-    <button class="hero-prev" data-hero-prev aria-label="Previous slide"></button>
-    <button class="hero-next" data-hero-next aria-label="Next slide"></button>
+    <div class="hero-visual">
+      <div class="hero-photo-frame">
+        <img class="hero-photo" src="assets/images/people-at-work.webp" width="1200" height="800" alt="Colleagues sharing ideas around a sunlit worktable" fetchpriority="high">
+        <div class="hero-photo__shade"></div>
+        <div class="hero-photo__caption"><span>IT STARTS WITH A CONNECTION.</span><p>Built around<br><em>human potential.</em></p></div>
+      </div>
+      <div class="hero-stamp" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><defs><path id="stamp-circle" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/></defs><text><textPath href="#stamp-circle" textLength="266">PEOPLE · PURPOSE · POSSIBILITY · </textPath></text><path d="M60 33v54M33 60h54M41 41l38 38M41 79l38-38" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </div>
+      <div class="hero-note"><span class="hero-note__symbol" aria-hidden="true">&#8599;</span><div><strong>The right fit.</strong><span>For both sides of the table.</span></div></div>
+      <span class="hero-side-label" aria-hidden="true">A BETTER WAY TO WORK, TOGETHER.</span>
+    </div>
   </div>
+  <div class="container hero-bottom"><span>Talent, with a personal touch.</span><a href="index.html#paths">Discover your next chapter <span aria-hidden="true">&#8595;</span></a></div>
 </section>

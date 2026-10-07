@@ -1,206 +1,64 @@
-/* =========================================================
-   Industries – Local Packing (Parking Lot)
-   Board: 12x6 | E=6x4 | M=4x2 | S=2x2 | 1E+5M+2S
-   60/30/10:
-   - Persian Blue 60 (tiles)
-   - Anti-Flash 30 (bg)
-   - Sinopia 10 (accents)
-========================================================= */
-
-:root{
-  --persian-blue: #1c39bb;
-  --anti-flash: #f2f3f4;
-  --sinopia: #cb410b;
+﻿.industries { background: var(--color-bg); }
+.industries-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.83fr) minmax(0, 1.37fr);
+  align-items: start;
+  gap: clamp(48px, 7vw, 100px);
 }
-
-.ind {
-  background: var(--anti-flash);
-  padding: 96px 6vw;
+.industries-heading h2 { margin-top: 0; font-size: var(--text-h2); }
+.industries-heading em { color: var(--color-brand); }
+.industries-heading p:not(.eyebrow) { max-width: 39ch; }
+.industries-image {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1.85;
+  object-fit: cover;
+  border-radius: 4px 4px 44px 4px;
+  margin-top: 36px;
 }
-
-.ind-inner {
-  max-width: 1200px;
-  margin: 0 auto;
+.industry-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-
-.ind-head {
-  text-align: center;
-  margin-bottom: 42px;
+.industry-list li { border-top: 1px solid var(--color-line); }
+.industry-list a {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 12px;
+  min-height: 106px;
+  padding-block: 22px;
+  color: var(--color-ink);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  transition: color 200ms var(--ease-out);
 }
-
-.ind-title {
-  font-size: 40px;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  margin: 0 0 10px 0;
-  color: var(--persian-blue);
+.industry-number { color: var(--color-muted); font-size: 0.6875rem; font-variant-numeric: tabular-nums; }
+.industry-arrow { color: var(--color-muted); font-size: 1.15rem; transition: transform 220ms var(--ease-out), color 220ms var(--ease-out); }
+.industry-list a:hover { color: var(--color-brand-dark); }
+.industry-list a:hover .industry-arrow { color: var(--color-brand); transform: translate(2px, -2px); }
+@media (max-width: 1000px) {
+  .industries-layout { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 40px; }
+  .industry-list { gap: 0 22px; }
+  .industry-list a { grid-template-columns: minmax(0, 1fr) 18px; gap: 10px; }
+  .industry-number { display: none; }
 }
-
-.ind-sub {
-  margin: 0 auto;
-  max-width: 760px;
-  color: rgba(0, 0, 0, 0.62);
-  font-size: 16px;
-  line-height: 1.6;
+@media (max-width: 800px) {
+  .industries-layout { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .industries-intro { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 32px; align-items: end; }
+  .industries-image { margin-top: 0; aspect-ratio: 1; }
+  .industry-list a { grid-template-columns: 22px minmax(0, 1fr) 18px; }
+  .industry-number { display: block; }
 }
-
-/* ------------------------------
-   Board (fixed 12x6)
--------------------------------- */
-.ind-grid{
-  --gap: 18px;
-  --r: 22px;
-  --row: 92px;
-
-  display:grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, var(--row));
-  gap: var(--gap);
-  align-items: stretch;
-
-  padding: 14px;
-  border-radius: 28px;
-
-  background:
-    radial-gradient(900px 320px at 20% 10%, rgba(28, 57, 187, 0.10), transparent 60%),
-    radial-gradient(800px 320px at 80% 30%, rgba(203, 65, 11, 0.08), transparent 65%),
-    transparent;
-}
-
-/* Tiles will be positioned by JS using grid-column / grid-row starts */
-.ind-tile{ min-width:0; min-height:0; }
-
-.ind-card{
-  width:100%;
-  height:100%;
-  border:0;
-  cursor:pointer;
-  text-align:left;
-  border-radius: var(--r);
-  padding: 18px 18px;
-  color:#fff;
-
-  background: linear-gradient(180deg, rgba(28, 57, 187, 0.92), rgba(28, 57, 187, 0.86));
-  box-shadow:
-    0 18px 38px rgba(0,0,0,0.12),
-    inset 0 1px 0 rgba(255,255,255,0.22);
-
-  transition: transform 220ms ease, box-shadow 220ms ease;
-  overflow:hidden;
-  position:relative;
-  will-change: transform;
-}
-
-.ind-card::after{
-  content:"";
-  position:absolute;
-  inset:-40% -60% auto auto;
-  width:220px;
-  height:220px;
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.20), transparent 55%);
-  transform: rotate(20deg);
-  pointer-events:none;
-}
-
-.ind-card:hover{
-  transform: translateY(-4px);
-  box-shadow:
-    0 26px 60px rgba(0,0,0,0.16),
-    inset 0 1px 0 rgba(255,255,255,0.24);
-}
-
-.ind-card:focus-visible{
-  outline: 3px solid rgba(203, 65, 11, 0.65);
-  outline-offset: 3px;
-}
-
-.ind-chip{
-  display:inline-block;
-  font-size:11px;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  opacity:0.75;
-}
-
-.ind-name{
-  margin:10px 0 6px 0;
-  font-size:18px;
-  line-height:1.15;
-  letter-spacing:-0.01em;
-}
-
-.ind-line{
-  margin:0;
-  font-size:13px;
-  line-height:1.4;
-  opacity:0.88;
-}
-
-.ind-lead{
-  margin:10px 0 12px 0;
-  font-size:14px;
-  line-height:1.55;
-  opacity:0.92;
-}
-
-.ind-bullets{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.ind-bullets li{
-  font-size:13px;
-  line-height:1.45;
-  margin-bottom:8px;
-  opacity:0.92;
-  padding-left:12px;
-  position:relative;
-}
-
-.ind-bullets li::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:8px;
-  width:6px;
-  height:6px;
-  border-radius:99px;
-  background: rgba(203, 65, 11, 0.95);
-}
-
-.ind-cta{
-  margin-top:12px;
-  display:inline-flex;
-  gap:8px;
-  align-items:center;
-  font-weight:600;
-  color: rgba(203, 65, 11, 0.98);
-}
-
-/* State visibility driven by data-size */
-.ind-tile[data-size="E"] .ind-elab{ display:block; }
-.ind-tile[data-size="E"] .ind-compact{ display:none; }
-.ind-tile:not([data-size="E"]) .ind-elab{ display:none; }
-.ind-tile:not([data-size="E"]) .ind-compact{ display:block; }
-
-/* Small tiles stay minimal */
-.ind-tile[data-size="S"] .ind-card{ padding:16px; }
-.ind-tile[data-size="S"] .ind-name{ font-size:16px; }
-.ind-tile[data-size="S"] .ind-line{ display:none; }
-
-/* Mobile: stack */
-@media (max-width: 720px){
-  .ind{ padding: 72px 5vw; }
-  .ind-title{ font-size:34px; }
-
-  .ind-grid{
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 14px;
-    padding:0;
-    background:transparent;
-  }
-  .ind-tile{ grid-column:auto !important; grid-row:auto !important; }
-  .ind-card{ min-height: 220px; }
+@media (max-width: 600px) {
+  .industries-intro { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .industries-image { max-width: none; aspect-ratio: 2.05; }
+  .industry-list { grid-template-columns: minmax(0, 1fr); }
+  .industry-list a { min-height: 76px; padding-block: 19px; gap: 18px; }
+  .industry-list br { display: none; }
 }

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <base href="../../" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f4ed" />
+    <meta name="description" content="Share your experience and the kind of opportunity you are looking for with Triada Technologies." />
+    <title>Share Your Resume | Triada Technologies</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="stylesheet" href="styles/base/fonts.css" />
+    <link rel="stylesheet" href="styles/base/reset.css" />
+    <link rel="stylesheet" href="styles/base/variables.css" />
+    <link rel="stylesheet" href="styles/base/typography.css" />
+    <link rel="stylesheet" href="styles/base/layout.css" />
+    <link rel="stylesheet" href="styles/partials/header.css" />
+    <link rel="stylesheet" href="styles/partials/footer.css" />
+    <link rel="stylesheet" href="styles/pages/site-pages.css" />
+  </head>
+  <body class="inner-page form-page resume-page">
+    <a class="skip-link" href="html/pages/submit-resume.html#main-content">Skip to content</a>
+    <div data-include="html/partials/header.html"></div>
+    <main class="page-shell" id="main-content">
+      <section class="page-hero page-hero--form">
+        <div class="container page-hero__grid">
+          <div><p class="eyebrow">For candidates</p><h1>Make your<br /><em>next move.</em></h1></div>
+          <p class="page-hero__lead">Tell us what kind of opportunity you’re looking for and share a little about your experience.</p>
+        </div>
+      </section>
+
+      <section class="form-section section">
+        <div class="container form-layout">
+          <aside class="form-aside">
+            <h2>Your experience.<br /><em>Your ambitions.</em></h2>
+            <p>Triada helps candidates explore opportunities aligned with their skills and career goals.</p>
+            <div class="form-contact-note"><span>Want to ask a question?</span><a href="html/pages/contact.html?type=candidate">Contact the team</a></div>
+          </aside>
+
+          <form class="site-form" data-demo-form>
+            <div class="form-grid">
+              <div class="form-field"><label for="candidate-name">Your name <span aria-hidden="true">*</span></label><input id="candidate-name" name="name" type="text" autocomplete="name" required /></div>
+              <div class="form-field"><label for="candidate-email">Email address <span aria-hidden="true">*</span></label><input id="candidate-email" name="email" type="email" autocomplete="email" spellcheck="false" required /></div>
+              <div class="form-field"><label for="candidate-phone">Phone number</label><input id="candidate-phone" name="phone" type="tel" autocomplete="tel" /></div>
+              <div class="form-field"><label for="candidate-role">Role or area of interest <span aria-hidden="true">*</span></label><input id="candidate-role" name="role" type="text" required /></div>
+              <div class="form-field form-field--full"><label for="candidate-resume">Resume file <span class="field-optional">optional in this preview</span></label><input class="file-input" id="candidate-resume" name="resume" type="file" accept=".pdf,.doc,.docx" aria-describedby="resume-help" /><span class="field-help" id="resume-help">PDF or Word document. This preview cannot upload or save files.</span></div>
+              <div class="form-field form-field--full"><label for="candidate-message">What are you looking for?</label><textarea id="candidate-message" name="message" rows="5"></textarea></div>
+            </div>
+            <div class="form-submit-row"><button class="button button--primary" type="submit">Check details <span class="button__arrow" aria-hidden="true">↗</span></button><p>Fields marked <span aria-hidden="true">*</span> are required.</p></div>
+            <p class="form-status" data-form-status role="status" aria-live="polite" tabindex="-1" hidden></p>
+            <p class="form-disclaimer">This local preview does not send or store your information or file. See the <a href="html/pages/privacy.html">privacy notice</a>.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div data-include="html/partials/footer.html"></div>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

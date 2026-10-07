@@ -1,79 +1,50 @@
-:root {
-
-
-  /* Brand neutrals */
-  --bg: #efefef;
-  --surface: #ffffff;
-  --surface-2: #f7f7f7;
-  --text: #122435;
-  --muted: rgba(18, 36, 53, 0.72);
-  --border: rgba(18, 36, 53, 0.12);
-
-  /* Accent */
-  --accent: #cc361e;
-  --accent-2: #a92a16;
-
-  /* Layout */
+﻿:root {
+  color-scheme: light;
+  /* 60 / 30 / 10: ivory canvas / ink and supporting surfaces / clay accents. */
+  --color-bg: #f7f4ed;
+  --color-surface: #fffdf8;
+  --color-surface-soft: #eee9de;
+  --color-ink: #262823;
+  --color-ink-soft: #45473f;
+  --color-muted: #65665d;
+  --color-line: #d8d4ca;
+  --color-brand: #b94f2d;
+  --color-brand-dark: #953c22;
+  --color-brand-pale: #f2dfd3;
+  --color-error: #a7352b;
+  --color-success: #365b40;
+  --color-on-dark: #f7f4ed;
+  --color-muted-on-dark: #c0c0b5;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-soft: 0 20px 60px rgb(55 41 28 / 8%);
+  --shadow-card: 0 8px 30px rgb(55 41 28 / 5%);
+  --font-display: "Manrope", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-editorial: "DM Serif Display", Georgia, serif;
+  --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+  --text-display: clamp(3.65rem, 6.55vw, 6.25rem);
+  --text-h1: clamp(2.75rem, 5.6vw, 5rem);
+  --text-h2: clamp(2.35rem, 4vw, 3.75rem);
+  --text-h3: clamp(1.35rem, 2.2vw, 1.85rem);
+  --text-body: 1rem;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
   --container: 1280px;
-  --gutter: 90px;
-
-  /* Spacing scale */
-  --s-1: 8px;
-  --s-2: 12px;
-  --s-3: 16px;
-  --s-4: 24px;
-  --s-5: 32px;
-  --s-6: 48px;
-  --s-7: 64px;
-  --s-8: 96px;
-  --s-9: 128px;
-
-  /* Radius */
-  --r-1: 6px;
-  --r-2: 12px;
-
-  /* Type */
-  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
-    Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-
-  --section-y: 120px;
-}
-
-@media (max-width: 1400px) {
-  :root {
-    --gutter: 64px;
-  }
-}
-
-@media (max-width: 1200px) {
-  :root {
-    --container: 1100px;
-    --gutter: 48px;
-  }
-}
-
-@media (max-width: 1024px) {
-  :root {
-    --container: 100%;
-    --gutter: 32px;
-    --section-y: 100px;
-  }
-}
-
-@media (max-width: 720px) {
-  :root {
-    --gutter: 20px;
-    --section-y: 72px;
-  }
-}
-/* Optional dark theme */
-.theme-dark {
-  --bg: #122435;
-  --surface: #0f1b29;
-  --surface-2: #132234;
-  --text: #efefef;
-  --muted: rgba(239, 239, 239, 0.78);
-  --border: rgba(239, 239, 239, 0.14);
+  --gutter: clamp(22px, 5vw, 80px);
+  --section-space: clamp(80px, 9vw, 136px);
+  --section-space-compact: clamp(56px, 6vw, 88px);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --z-header: 30;
+  --z-menu: 40;
+  --z-skip: 50;
 }
